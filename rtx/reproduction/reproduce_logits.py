@@ -1,9 +1,10 @@
 import argparse
-import rta.config as config
 import numpy as np
 import os
 import random
 import torch
+
+import config
 
 from tqdm import tqdm
 from utils import MODEL_MAP, load_json, get_tokenizer, get_model, get_device
