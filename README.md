@@ -8,7 +8,7 @@
   <img src="./assets/entropy_viz.png" width="600"/>
 </p>
 
-This repository includes the code to reproduce the internal states for the RAGTruth dataset as well as detectability and separability scores that uncover positional differences between hallucination tokens of different indices described in our paper 'First Hallucination Tokens Are Different From Conditional Ones'  submitted to 'The 2nd Workshop on Reliable and Responsible Foundation Models at ICML 2025'.
+This repository includes the code to reproduce the internal states for the RAGTruth dataset as well as detectability and separability scores that uncover positional differences between hallucination tokens of different indices described in our paper 'First Hallucination Tokens Are Different From Conditional Ones'.
 
 > **Abstract**:
 Hallucination, the generation of untruthful content, is one of the major concerns regarding foundational models. Detecting hallucinations at the token level is vital for real-time filtering and targeted correction, yet the variation of hallucination signals within token sequences is not fully understood. Leveraging the RAGTruth corpus with token-level annotations and reproduced logits, we analyse how these signals depend on a tokens position within hallucinated spans, contributing to an improved understanding of token-level hallucination. Our results show that the first hallucinated token carries a stronger signal and is more detectable than conditional tokens. We release our analysis framework, along with code for logit reproduction and metric computation.
