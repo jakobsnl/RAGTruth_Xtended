@@ -171,10 +171,9 @@ If you find our work useful, please consider citing it using the following citat
       title={First Hallucination Tokens Are Different From Conditional Ones}, 
       author={Jakob Snel and Seong Joon Oh},
       year={2025},
-      eprint={tbd},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
-      url={tbd}, 
+      url={[https://arxiv.org/abs/2507.20836}, 
 }
 ```
 
