@@ -12,5 +12,5 @@
 
 bash -c "
 source ~/.bashrc
-conda  activate /home/oh/owl777/.conda/envs/ragtruth
+conda  activate /home/oh/owl777/.conda/envs/rtx
 python rtx/create_dataset.py --input_dir dataset/RAGTruth/ --save_dir dataset/rta --add_logits"
