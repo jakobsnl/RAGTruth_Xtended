@@ -8,7 +8,9 @@
   <img src="./assets/entropy_viz.png" width="600"/>
 </p>
 
-This repository includes the code to reproduce the internal states for the RAGTruth dataset as well as detectability and separability scores that uncover positional differences between hallucination tokens of different indices described in our paper 'First Hallucination Tokens Are Different From Conditional Ones'.
+This repository includes the code to reproduce the internal states for the RAGTruth dataset as well as detectability and separability scores that uncover positional differences between hallucination tokens of different indices described in our paper 'First Hallucination Tokens Are Different From Conditional Ones'. 
+
+Note, that reproduction of internal states is limited to llama-2-7b-chat, llama-2-13b-chat, llama-2-70b-chat, and mistral-7B-instruct.
 
 > **Abstract**:
 Large Language Models (LLMs) hallucinate, and detecting these cases is key to ensuring trust. While many approaches address hallucination detection at the response or span level, recent work explores token-level detection, enabling more fine-grained intervention. However, the distribution of hallucination signal across sequences of hallucinated tokens remains unexplored. We leverage token-level annotations from the RAGTruth corpus and find that the first hallucinated token is far more detectable than later ones. This structural property holds across models, suggesting that first hallucination tokens play a key role in token-level hallucination detection.
@@ -16,14 +18,13 @@ Large Language Models (LLMs) hallucinate, and detecting these cases is key to en
 This repository provides:
 * **Core Scripts**:
   * `rtx/create_dataset.py`: Enriches the RAGTruth dataset with logits and hidden states and restructures it for analysis.
-  * `rtx/analyse_hallucination.py`: Analyses hallucinations using token- and sequence-level uncertxinty scores.
+  * `rtx/analyse_hallucination.py`: Analyses hallucinations using token- and sequence-level uncertainty scores.
   * `rtx/visualise_hallucination.py`: Visualises hallucination patterns in model outputs.
   * `rtx/utils.py`: Contains utility functions for data processing and analysis.
   * `rtx/config.py`: Configuration file with paths and settings.
 
-
 * **Data and Results**:
-  * `dataset/`: Contains the RAGTruth dataset and enriched datasets with logits and hidden states.
+  * `dataset/`: Contains the RAGTruth dataset and our own, extended dataset version.
   * `visualisation/`: Contains generated plots and visualisations.
   * `results/`: Stores analysis results for different models and positional contexts.
   * `plots/`: Plotted analysis results for different models and positional contexts.
@@ -43,7 +44,9 @@ pip install -e .
 
 ### Reproduce Logits (& Hidden States)
 
-You can run the reproduction of model outputs for llama-2-7b-chat, llama-2-13b-chat, llama-2-70b-chat, and mistral-7B-instruct:
+We provide all logits within our dataset repository on HuggingFace: https://huggingface.co/datasets/jakobsnel/RAGTruth_Xtended/blob/main/README.md
+
+If you need access to the hidden states or you want to run the logit reproduction yourself, run:
 
 ```
 python rtx/create_dataset.py --input_dir dataset/RAGTruth/ --save_dir dataset/rtx --add_logits
