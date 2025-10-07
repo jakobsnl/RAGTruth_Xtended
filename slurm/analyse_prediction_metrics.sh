@@ -9,6 +9,6 @@
 
 bash -c "
 source ~/.bashrc
-conda  activate /home/oh/owl777/.conda/envs/ragtruth
-python rtx/analyse_hallucination.py --output_dir results/ --dataset_dir dataset/rta/ --sequence_scopes all first second third+ 
+conda  activate /home/oh/owl777/.conda/envs/rtx
+python rtx/analyse_hallucination.py --output_dir results/ --dataset_dir dataset/rtx/ --sequence_scopes all first second third+ 
 "

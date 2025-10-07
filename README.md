@@ -173,7 +173,7 @@ If you find our work useful, please consider citing it using the following citat
       year={2025},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
-      url={[https://arxiv.org/abs/2507.20836}, 
+      url={https://arxiv.org/abs/2507.20836}, 
 }
 ```
 
