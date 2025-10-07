@@ -10,7 +10,7 @@
 
 This repository includes the code to reproduce the internal states for the RAGTruth dataset as well as detectability and separability scores that uncover positional differences between hallucination tokens of different indices described in our paper 'First Hallucination Tokens Are Different From Conditional Ones'. 
 
-Note, that reproduction of internal states is limited to llama-2-7b-chat, llama-2-13b-chat, llama-2-70b-chat, and mistral-7B-instruct.
+Note, that reproduction of internal states as well as the subsequent analysis is limited to llama-2-7b-chat, llama-2-13b-chat, llama-2-70b-chat, and mistral-7B-instruct.
 
 > **Abstract**:
 Large Language Models (LLMs) hallucinate, and detecting these cases is key to ensuring trust. While many approaches address hallucination detection at the response or span level, recent work explores token-level detection, enabling more fine-grained intervention. However, the distribution of hallucination signal across sequences of hallucinated tokens remains unexplored. We leverage token-level annotations from the RAGTruth corpus and find that the first hallucinated token is far more detectable than later ones. This structural property holds across models, suggesting that first hallucination tokens play a key role in token-level hallucination detection.
